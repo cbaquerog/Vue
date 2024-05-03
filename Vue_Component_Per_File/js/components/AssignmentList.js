@@ -12,10 +12,9 @@ export default {
     </h2>
 
     <assignment-tags 
+    v-model="currentTag"
     :initialTags="assignments.map(a => a.tag)" 
-    :current-tag="currentTag"
-    @change="currentTag = $event"
-    />
+    ></assignment-tags>
 
     <ul class="border border-gray-600 divide-y divide-gray-600 mt-6">
         <assignment
@@ -30,7 +29,7 @@ export default {
 
 props: {
     assignments: Array,
-
+    
     title: String
 },
 
